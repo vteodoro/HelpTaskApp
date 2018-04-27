@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.MainActivity">
+
+    <item android:title="Criar tarefa"
+        android:id="@+id/mapa"
+        app:showAsAction="never"/>
+
+    <item android:title="Listar todas"
+        android:id="@+id/btListar"
+        app:showAsAction="never"/>
+
+</menu>
