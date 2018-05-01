@@ -4,29 +4,31 @@ import java.util.Date;
 
 public class Tarefa {
 
-    private int id;
+    private Long id;
     private String titulo;
-    private Date data;
+    private String data;
+    private Long hora;
     private boolean urgente;
     private boolean importante;
     private String detalhes;
 
     public Tarefa(){}
 
-    public Tarefa(int id, String titulo, Date data, boolean urg, boolean imp, String detalhes){
+    public Tarefa(Long id, String titulo, String data, Long hora, boolean urg, boolean imp, String detalhes){
         this.id = id;
         this.titulo = titulo;
         this.data = data;
+        this.hora = hora;
         this.urgente = urg;
         this.importante = imp;
         this.detalhes = detalhes;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -38,12 +40,20 @@ public class Tarefa {
         this.titulo = titulo;
     }
 
-    public Date getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(Date data) {
+    public void setData(String data) {
         this.data = data;
+    }
+
+    public Long getHora() {
+        return hora;
+    }
+
+    public void setHora(Long hora) {
+        this.hora = hora;
     }
 
     public boolean isUrgente() {

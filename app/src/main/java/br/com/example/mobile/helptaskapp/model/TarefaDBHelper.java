@@ -7,14 +7,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class TarefaDBHelper extends SQLiteOpenHelper {
 
     private static final String NOME_BANCO = "db.tarefas.db";
-    private static final String TABELA = "tarefas";
-    private static final String ID = "_id";
-    private static final String TITULO = "titulo";
-    private static final String DATA = "data";
-    private static final String HORA = "hora";
-    private static final String URGENTE = "urgente";
-    private static final String IMPORTANTE = "importante";
-    private static final String DETALHES = "detalhes";
+
+    public static final String TABELA = "tarefas";
+    public static final String ID = "_id";
+    public static final String TITULO = "titulo";
+    public static final String DATA = "data";
+    public static final String HORA = "hora";
+    public static final String URGENTE = "urgente";
+    public static final String IMPORTANTE = "importante";
+    public static final String DETALHES = "detalhes";
 
     private static final int VERSAO = 1;
 
@@ -26,7 +27,7 @@ public class TarefaDBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         String criarDB = "create table " + TABELA + "(" + ID
                 + " integer primary key autoincrement," + TITULO
-                + " text," + DATA + " long," + HORA + " text,"
+                + " text," + DATA + " text," + HORA + " long,"
                 + URGENTE + " text," + IMPORTANTE + " text,"
                 + DETALHES + " text)";
         sqLiteDatabase.execSQL(criarDB);
