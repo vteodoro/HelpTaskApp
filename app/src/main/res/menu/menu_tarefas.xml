@@ -5,11 +5,11 @@
     tools:context=".view.MainActivity">
 
     <item android:title="Criar tarefa"
-        android:id="@+id/mapa"
+        android:id="@+id/newTask"
         app:showAsAction="never"/>
 
     <item android:title="Listar todas"
-        android:id="@+id/btListar"
+        android:id="@+id/list"
         app:showAsAction="never"/>
 
 </menu>
