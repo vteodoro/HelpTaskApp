@@ -10,11 +10,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import br.com.example.mobile.helptaskapp.R;
+import br.com.example.mobile.helptaskapp.model.Tarefa;
 
 public class TarefaViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
 
     public final TextView titulo;
-    public final TextView artista;
+    public final TextView data;
     private Long tarefaId;
     public final TarefaAdapter adapter;
 
@@ -26,25 +27,25 @@ public class TarefaViewHolder extends RecyclerView.ViewHolder implements View.On
         view.setOnClickListener(this);
 
         titulo = view.findViewById(R.id.tvTitulo);
-        artista = view.findViewById(R.id.tvArtista);
+        data = view.findViewById(R.id.tvData);
     }
 
-    public void preencher(Musica musica){
-        musicaId = musica.getId();
-        titulo.setText(musica.getTitulo());
-        artista.setText(musica.getArtista());
+    public void preencher(Tarefa tarefa){
+        tarefaId = tarefa.getId();
+        titulo.setText(tarefa.getTitulo());
+        data.setText(tarefa.getData());
     }
 
     @Override
     public void onClick(View view) {
-        Toast.makeText(view.getContext(), musicaId.toString(), Toast.LENGTH_SHORT).show();
-        Log.d("Musica selecionada", musicaId.toString());
+        Toast.makeText(view.getContext(), tarefaId.toString(), Toast.LENGTH_SHORT).show();
+        Log.d("Tarefa selecionada", tarefaId.toString());
     }
 
     @Override
     public boolean onLongClick(View view) {
         PopupMenu popupMenu = new PopupMenu(view.getContext(), view);
-        popupMenu.getMenuInflater().inflate(R.menu.musica_options, popupMenu.getMenu());
+        popupMenu.getMenuInflater().inflate(R.menu.menu_tarefas, popupMenu.getMenu());
 
         final Activity context = (Activity)view.getContext();
 
@@ -52,10 +53,10 @@ public class TarefaViewHolder extends RecyclerView.ViewHolder implements View.On
             public boolean onMenuItemClick(MenuItem item){
                 switch(item.getItemId()){
 
-                    case R.id.menuMusEditar:
+                    case R.id.newTask:
                         break;
 
-                    case R.id.menuMusDeletar:
+                    case R.id.list:
                         break;
                 }
                 return true;
