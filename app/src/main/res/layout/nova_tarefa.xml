@@ -13,7 +13,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:hint="Título"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:hint="Data"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etTitulo" />
@@ -39,7 +39,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:hint="Hora"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etData" />
@@ -52,7 +52,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:text="Urgente"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toStartOf="@+id/ckImportante"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etHora" />
@@ -64,7 +64,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="25dp"
         android:text="Importante"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="@+id/ckUrgente"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ckUrgente"
@@ -78,7 +78,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:hint="Detalhes"
-        android:textSize="25dp"
+        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ckUrgente" />
