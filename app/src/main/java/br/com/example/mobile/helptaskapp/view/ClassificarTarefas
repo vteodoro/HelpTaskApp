@@ -1,0 +1,14 @@
+Tarefa tarefa = new Tarefa();
+
+if (tarefa.urgente == true && tarefa.importante == true){
+        mover tarefa para quadrante 2 (fazer)
+}
+if(tarefa.urgente == true && tarefa.importante == false){
+        mover tarefa para quadrante 1 (planejar)
+}
+if(tarefa.urgente == false && tarefa.importante == true){
+        mover tarefa para quadrante 4 (delegar)
+}
+if(tarefa.urgente == false && tarefa.importante == false){
+        mover tarefa para quadrante 3 (esquecer)
+}
