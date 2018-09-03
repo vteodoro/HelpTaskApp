@@ -6,10 +6,10 @@
 
     <item android:title="Criar tarefa"
         android:id="@+id/newTask"
-        app:showAsAction="never"/>
+        app:showAsAction="always"/>
 
     <item android:title="Listar todas"
         android:id="@+id/list"
-        app:showAsAction="never"/>
+        app:showAsAction="always"/>
 
 </menu>
