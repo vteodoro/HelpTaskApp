@@ -1,12 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<android.support.constraint.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:card_view="http://schemas.android.com/apk/res-auto"
+android:layout_height="match_parent"
+android:layout_width="match_parent">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rvTarefas"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_executar"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="80dp"
+    card_view:cardBackgroundColor="@color/card_exec"
+    card_view:cardCornerRadius="4dp"
+    card_view:layout_constraintStart_toStartOf="parent"
+    card_view:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.CardView>
 
-</RelativeLayout>
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_planejar"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginTop="80dp"
+    card_view:cardBackgroundColor="@color/card_plan"
+    card_view:cardCornerRadius="4dp"
+    card_view:layout_constraintEnd_toEndOf="parent"
+    card_view:layout_constraintTop_toTopOf="parent"></android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_delegar"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="16dp"
+    card_view:cardBackgroundColor="@color/card_deleg"
+    card_view:cardCornerRadius="4dp"
+    card_view:layout_constraintStart_toStartOf="parent"
+    card_view:layout_constraintTop_toBottomOf="@+id/card_executar">
+
+</android.support.v7.widget.CardView>
+
+<android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_deletar"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginTop="16dp"
+    card_view:cardBackgroundColor="@color/card_delet"
+    card_view:cardCornerRadius="4dp"
+    card_view:layout_constraintEnd_toEndOf="parent"
+    card_view:layout_constraintTop_toBottomOf="@+id/card_planejar">
+
+</android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>
