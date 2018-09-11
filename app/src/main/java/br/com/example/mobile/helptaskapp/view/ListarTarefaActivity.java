@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import br.com.example.mobile.helptaskapp.R;
 
-public class ListarTarefaActivity extends AppCompatActivity {
+public class ListarTarefaActivity extends AppCompatActivity{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

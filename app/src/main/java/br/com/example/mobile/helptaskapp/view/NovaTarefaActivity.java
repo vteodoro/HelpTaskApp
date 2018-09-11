@@ -10,8 +10,12 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 
 import br.com.example.mobile.helptaskapp.R;
+import br.com.example.mobile.helptaskapp.model.Tarefa;
+import br.com.example.mobile.helptaskapp.model.TarefaDAO;
 
 public class NovaTarefaActivity extends AppCompatActivity {
+    private TarefaDAO dao = TarefaDAO.manager;
+    private Tarefa tarefa;
     private EditText titulo;
     private EditText data;
     private EditText hora;
@@ -30,6 +34,24 @@ public class NovaTarefaActivity extends AppCompatActivity {
         urgente = findViewById(R.id.ckUrgente);
         importante = findViewById(R.id.ckImportante);
         detalhes = findViewById(R.id.etDetalhes);
+
+        Intent intent = getIntent();
+        if(intent != null){
+            Bundle dados = intent.getExtras();
+            if(dados != null){
+                long id = dados.getLong("id");
+                tarefa = dao.getTarefa(id);
+                if(tarefa != null){
+                    titulo.setText(tarefa.getTitulo());
+                    data.setText(tarefa.getData());
+                    hora.setText(tarefa.getHora());
+                    urgente.setChecked(tarefa.isUrgente());
+                    importante.setChecked(tarefa.isImportante());
+                    detalhes.setText(tarefa.getDetalhes());
+                }
+            }
+        }
+
     }
 
     @Override

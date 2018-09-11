@@ -7,14 +7,14 @@ public class Tarefa {
     private Long id;
     private String titulo;
     private String data;
-    private Long hora;
+    private int hora;
     private boolean urgente;
     private boolean importante;
     private String detalhes;
 
     public Tarefa(){}
 
-    public Tarefa(Long id, String titulo, String data, Long hora, boolean urg, boolean imp, String detalhes){
+    public Tarefa(Long id, String titulo, String data, int hora, boolean urg, boolean imp, String detalhes){
         this.id = id;
         this.titulo = titulo;
         this.data = data;
@@ -48,11 +48,11 @@ public class Tarefa {
         this.data = data;
     }
 
-    public Long getHora() {
+    public int getHora() {
         return hora;
     }
 
-    public void setHora(Long hora) {
+    public void setHora(int hora) {
         this.hora = hora;
     }
 
