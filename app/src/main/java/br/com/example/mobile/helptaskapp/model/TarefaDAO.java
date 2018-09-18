@@ -47,7 +47,7 @@ public class TarefaDAO {
                 tarefa.setId(cursor.getLong(0));
                 tarefa.setTitulo(cursor.getString(1));
                 tarefa.setData(cursor.getString(2));
-                tarefa.setHora(cursor.getLong(3));
+                tarefa.setHora(cursor.getInt(3));
                 tarefa.setUrgente(Boolean.parseBoolean(cursor.getString(4)));
                 tarefa.setImportante(Boolean.parseBoolean(cursor.getString(5)));
                 tarefa.setDetalhes(cursor.getString(6));
@@ -67,7 +67,7 @@ public class TarefaDAO {
         tarefa.setId(cursor.getLong(0));
         tarefa.setTitulo(cursor.getString(1));
         tarefa.setData(cursor.getString(2));
-        tarefa.setHora(cursor.getLong(3));
+        tarefa.setHora(cursor.getInt(3));
         tarefa.setUrgente(Boolean.parseBoolean(cursor.getString(4)));
         tarefa.setImportante(Boolean.parseBoolean(cursor.getString(5)));
         tarefa.setDetalhes(cursor.getString(6));

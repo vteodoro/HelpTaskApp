@@ -99,7 +99,7 @@ public class Tarefa {
         return id.hashCode();
     }
 
-    @Override
+    //@Override
     public int compareTo(@NonNull Tarefa x){
         return titulo.toLowerCase().compareTo(x.titulo.toLowerCase());
     }
