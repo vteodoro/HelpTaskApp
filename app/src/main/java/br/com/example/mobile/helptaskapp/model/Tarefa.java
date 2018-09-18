@@ -1,6 +1,6 @@
 package br.com.example.mobile.helptaskapp.model;
 
-import java.util.Date;
+import android.support.annotation.NonNull;
 
 public class Tarefa {
 
@@ -13,6 +13,8 @@ public class Tarefa {
     private String detalhes;
 
     public Tarefa(){}
+
+    public Tarefa (Long id){this.id = id;}
 
     public Tarefa(Long id, String titulo, String data, int hora, boolean urg, boolean imp, String detalhes){
         this.id = id;
@@ -78,5 +80,26 @@ public class Tarefa {
 
     public void setDetalhes(String detalhes) {
         this.detalhes = detalhes;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if(this == o) return true;
+        if(!(o instanceof Tarefa)) return false;
+
+        Tarefa tarefa = (Tarefa) o;
+
+        if(!id.equals(tarefa.id)) return false;
+
+        return true;
+    }
+
+    @Override
+    public int hashCode(){
+        return id.hashCode();
+    }
+    
+    public int compareTo(@NonNull Tarefa x){
+        return titulo.toLowerCase().compareTo(x.titulo.toLowerCase());
     }
 }
